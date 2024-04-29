@@ -30,9 +30,11 @@ body{
             color: #ffffff;
             font-weight: 700;
             font-size: 1.2rem;
-            /*animacion hover*/
-            &:hover{
-                animation: tilt-n-move-shaking 0.25s infinite;
+            align-items: center;
+            svg{
+                height: 30px;
+                width: 20px;
+                align-items: center;
             }
         }
         .BarradeNavegacion{
@@ -69,6 +71,10 @@ body{
                 }
             }
            
+        }
+        .Logo:hover{
+            scale: 1.2;
+            transition: 0.5s;
         }
 
         /* Header movil */
@@ -127,7 +133,11 @@ body{
             .buscadorPeliculas{
                 padding-top: 7vh;
             }
+            .buscar{
+                color: white;
+            }
         }
+
         .separador1{
             margin-top: 20vh;
             border: 1px solid #9f3647;
@@ -161,12 +171,8 @@ body{
             padding-bottom: 50px;
             display: flex;
             justify-content: center;
-            .botonanterior, .botonsiguiente{
-                background-color: #9f3647;
-                padding: 10px;
-                border-radius: 5px;
-                color: white;
-                border-color: white;
+            .btn-danger{
+                margin: 15px;
             }
         }
         .separador{
@@ -250,10 +256,68 @@ body{
             }
         }
 
+
+        @keyframes show{
+            from {
+                opacity: 0;
+                scale: 25%;
+            }
+            to {
+                opacity: 1;
+                scale: 100%;
+            }
+        }
+
+        @keyframes show2{
+            from {
+                opacity: 0;
+                scale: 25%;
+            }
+            to {
+                opacity: 1;
+                scale: 100%;
+            }
+        }
+
+
+        img, .Buscador ,.contenedorA, .botones, .separador{
+            view-timeline-name:  --image;
+             view-timeline-axis: --image;
+
+             animation-timeline: --image;
+             animation-name: show;
+
+             animation-range: entry 40% cover 50%;
+             animation-fill-mode: both;
+        }
+
+        .Portada{
+            view-timeline-name:  --image;
+             view-timeline-axis: --image;
+
+             animation-timeline: --image;
+             animation-name: show;
+        }
+
         .IniciarSesion, .Registro{
             background-image: url(peliculas/fondo1.jpg);
         }
         
+        .headerRegistrarse{
+            padding-top: 5px;
+        }
+        .headerRegistrarse .Logo{
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+        .headerRegistrarse .Logo:hover{
+            scale: 1.2;
+            transition: 05s;
+        }
+
+
+
         .Registro .main, .IniciarSesion .main{
             border: solid white 1px;
             background-color:rgb(42, 42, 42);
@@ -430,6 +494,9 @@ body{
 
             /* Seccion de Inicio de Sesion */
 
+            
+
+
                 form{
                     width: 100%;
                     padding:40px;
@@ -479,6 +546,7 @@ body{
                
             }
 
+            /* Detalles */
             .mainDetalle{
     
                 .detalle{
@@ -515,6 +583,8 @@ body{
                     
                    
                 }
+
+
                 .trailer{
                     padding-top:150px;
                     padding-bottom: 100px;
