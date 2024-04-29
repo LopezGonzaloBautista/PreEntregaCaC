@@ -580,6 +580,46 @@ body{
                 width: 80%;
 
             }
+            .mainDetalle .detalle{
+                height: 40vh;
+                margin-bottom: 40vh;
+            }
+            .imgDetalle{
+                display: flex;
+                justify-content: center;
+            }
+            .mainDetalle .detalle .contenedorDetalle img {
+                border-radius: 20px;
+                height: 45vh;
+                width: 35vh;
+                margin-top: 35vh;
+            }
+
+            .contenedorDetalle{
+                display: flex;
+                flex-direction: column;
+                height: 50vh;
+                img{
+                    height: 60vh;
+                    width: 40vh;
+                }
+            }
+            .mainDetalle .detalle .contenedorDetalle .textoDetalle {
+                padding-top: 10%;
+                font-size: 1.5vh;
+}
+            .trailer{
+                display: flex;
+                flex-direction: column;
+            }
+            .trailer iframe{
+                width: 45vh;
+                margin-bottom: 5vh;
+                margin-top: 3vh;
+            }
+
+
+            
                 
             }
                
