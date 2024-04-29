@@ -576,7 +576,7 @@ body{
             }
 
             /* Seccion de Inicio de Sesion */
-            .IniciarSesion .main{
+            .IniciarSesion .main, .Registro .main{
                 width: 80%;
 
             }
