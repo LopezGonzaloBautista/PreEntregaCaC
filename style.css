@@ -149,6 +149,7 @@ body{
             h3{
                 text-align: center;
                 font-size: 2.5rem;
+                margin-top: 50px;
             }
             .contenedorTendencias {
                 margin-top: 5vh;
@@ -163,6 +164,10 @@ body{
                         border-radius: 3%;
                     }
                 }
+            }
+            .contenedorTendencias .item:hover{
+                scale: 1.2;
+                transition: 0.5s;
             }
 
         }
@@ -268,18 +273,6 @@ body{
             }
         }
 
-        @keyframes show2{
-            from {
-                opacity: 0;
-                scale: 25%;
-            }
-            to {
-                opacity: 1;
-                scale: 100%;
-            }
-        }
-
-
         img, .Buscador ,.contenedorA, .botones, .separador{
             view-timeline-name:  --image;
              view-timeline-axis: --image;
@@ -291,13 +284,7 @@ body{
              animation-fill-mode: both;
         }
 
-        .Portada{
-            view-timeline-name:  --image;
-             view-timeline-axis: --image;
-
-             animation-timeline: --image;
-             animation-name: show;
-        }
+        
 
         .IniciarSesion, .Registro{
             background-image: url(peliculas/fondo1.jpg);
@@ -439,13 +426,22 @@ body{
                         ul{
                             list-style: none;
                             display: flex;
-                            column-gap: 20px;
+                            justify-content: space-around;
                             li{
                                 a{
                                     text-decoration: none;
                                     color: #ffffff;
                                     font-size: 2.5rem;
                                     margin-right: 50px;
+                                    svg{
+                                        height: 5vh;
+                                        width: 5vh;
+                                    }
+                                    svg:hover{
+                                        scale: 1.4;
+                                        transition: 0.5s;
+                                        color: #9f3647;
+                                    }
                                 }
                             }
                           
@@ -468,6 +464,17 @@ body{
                 }
             }
         
+    }
+
+    .trailer{
+        view-timeline-name:  --image;
+         view-timeline-axis: --image;
+
+         animation-timeline: --image;
+         animation-name: show;
+
+         animation-range: entry 40% cover 50%;
+         animation-fill-mode: both;
     }
 
         @media (max-width: 768px) {
@@ -499,6 +506,9 @@ body{
                 }
             }
             /* Portada, movil */
+            .Portada{
+                height: 45vh;
+            }
             .Portada h1{
                 font-size: 40px;
             }
@@ -513,7 +523,7 @@ body{
             }
             .Buscador{
                 display: flex;
-                height: 50vh;
+                height: 40vh;
                 flex-direction: column;
                 align-items: center;
                 padding-top: 3vh;
@@ -525,7 +535,7 @@ body{
                 }
             }
             .separador1{
-                margin-top: 20vh;
+                margin-top: 10vh;
                 border: 1px solid #9f3647;
                 width: 80%;
             }
@@ -534,7 +544,9 @@ body{
                 h3{
                     text-align: center;
                     font-size: 1.5rem;
+                    margin-top: 0px;
                 }
+                
                 .contenedorTendencias {
                     margin-top: 30px;
                     display: grid;
@@ -617,10 +629,6 @@ body{
                 margin-bottom: 5vh;
                 margin-top: 3vh;
             }
-
-
-            
-                
             }
                
             
